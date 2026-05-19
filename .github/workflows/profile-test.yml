@@ -13,6 +13,7 @@ jobs:
       contents: read
     env:
       NBS_COLLECTION_PACKAGES: ${{ github.workspace }}/collection_packages
+      NBS_PROFILE_USE_LOCKED_PACKAGES: "1"
 
     steps:
       - name: Checkout repository
@@ -36,18 +37,6 @@ jobs:
 
           pixi run -e pods pods-list | tee pods-list.txt
           grep -q "Available services" pods-list.txt
-
-      - name: Prepare collection_packages for containers
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          mkdir -p "${NBS_COLLECTION_PACKAGES}"
-          if [ ! -d "${NBS_COLLECTION_PACKAGES}/haxpes/.git" ]; then
-            git clone https://github.com/nsls-ii-sst/haxpes.git "${NBS_COLLECTION_PACKAGES}/haxpes"
-          else
-            git -C "${NBS_COLLECTION_PACKAGES}/haxpes" pull --ff-only
-          fi
 
       - name: Start bluesky-services
         shell: bash
@@ -73,12 +62,32 @@ jobs:
           podman logs --tail 200 $(podman ps -aq) || true
           exit 1
 
+      - name: Start ADSim
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pixi run -e pods pods-start adsim
+
+          for _ in $(seq 1 60); do
+            timeout 10s podman ps --format '{{.Names}}' | tee podman-ps.txt
+            if grep -q "adsim" podman-ps.txt; then
+              exit 0
+            fi
+            sleep 2
+          done
+
+          echo "Timed out waiting for ADSim to be running." >&2
+          podman ps -a || true
+          podman logs --tail 200 $(podman ps -aq) || true
+          exit 1
+
       - name: Start sim
         shell: bash
         run: |
           set -euo pipefail
 
-          pixi run -e pods pods-start --dev sim
+          pixi run -e pods pods-start sim
 
           for _ in $(seq 1 60); do
             timeout 10s podman ps --format '{{.Names}}' | tee podman-ps.txt
