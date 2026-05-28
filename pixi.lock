@@ -626,14 +626,14 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.25.0-py312h5253ce2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: git+https://github.com/nsls-ii-sst/haxpes?rev=master#dedb5178c2c4b412e0aa5efedb53ea99b6a0f4e9
-      - pypi: git+https://github.com/xraygui/nbs-gui?branch=develop#048eb9b0ae5584384a4894f050021b6228ca7541
+      - pypi: git+https://github.com/xraygui/nbs-gui?branch=develop#82cd23cbe029ea0e270590736bd1329f6ac78602
       - pypi: https://files.pythonhosted.org/packages/c8/0f/330d5438183bfe070751ae1a9408674cad1d49cddddc343a83c0864af33b/nbs_bl-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a7/aa/a1ef22fd3450c91f037ebd2a601a9955d693479d2fedf191cac309fe3b28/nbs_core-0.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a3/a7/805515fb4bbe6c203948c95af5b5d717bc2d73479af632104581323df973/nbs_livetable-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/d8/8af47ecca80c365d5ffcdce6fae78ec71921052189c1486ba9dbac7a36f4/pvxslibs-1.3.2-cp312-cp312-manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/7a/60/aba9f3c3f1f48c7fbdf03bed45b576a916cd09c08242939b5294b85e37b4/qtconsole-5.7.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/76/37c0ccd5ab968a6a438f9c623aeecc84c202ab2fabc6a8fd927580c15b5a/QtPy-2.4.3-py3-none-any.whl
-      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
       - pypi: https://files.pythonhosted.org/packages/c7/18/c86eb8e0202e32dd3df50d43d7ff9854f8e0603945ff398974c1d91ac1ef/tomli_w-1.2.0-py3-none-any.whl
   pods:
     channels:
@@ -1256,7 +1256,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a7/aa/a1ef22fd3450c91f037ebd2a601a9955d693479d2fedf191cac309fe3b28/nbs_core-0.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7a/23/d8a6a4685422b928149083ab061fc44ec45ced4fc3414ebfbaa3181546a9/nbs_pods-0.2.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/d8/8af47ecca80c365d5ffcdce6fae78ec71921052189c1486ba9dbac7a36f4/pvxslibs-1.3.2-cp312-cp312-manylinux2014_x86_64.whl
-      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
   qs:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -1882,7 +1882,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/c8/0f/330d5438183bfe070751ae1a9408674cad1d49cddddc343a83c0864af33b/nbs_bl-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a7/aa/a1ef22fd3450c91f037ebd2a601a9955d693479d2fedf191cac309fe3b28/nbs_core-0.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/d8/8af47ecca80c365d5ffcdce6fae78ec71921052189c1486ba9dbac7a36f4/pvxslibs-1.3.2-cp312-cp312-manylinux2014_x86_64.whl
-      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
   sim:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -2503,7 +2503,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a7/aa/a1ef22fd3450c91f037ebd2a601a9955d693479d2fedf191cac309fe3b28/nbs_core-0.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3a/e6/4ad1dd469a8e5b4f5e1da7c22bc13d6de263a5a0031460363e89020d069a/nbs_sim-0.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/d8/8af47ecca80c365d5ffcdce6fae78ec71921052189c1486ba9dbac7a36f4/pvxslibs-1.3.2-cp312-cp312-manylinux2014_x86_64.whl
-      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
   terminal:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -3123,7 +3123,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/c8/0f/330d5438183bfe070751ae1a9408674cad1d49cddddc343a83c0864af33b/nbs_bl-0.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a7/aa/a1ef22fd3450c91f037ebd2a601a9955d693479d2fedf191cac309fe3b28/nbs_core-0.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/d8/8af47ecca80c365d5ffcdce6fae78ec71921052189c1486ba9dbac7a36f4/pvxslibs-1.3.2-cp312-cp312-manylinux2014_x86_64.whl
-      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+      - pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
   viewer:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -9294,9 +9294,9 @@ packages:
   requires_dist:
   - tomli ; python_full_version < '3.11'
   requires_python: '>=3.9'
-- pypi: git+https://github.com/xraygui/nbs-gui?branch=develop#048eb9b0ae5584384a4894f050021b6228ca7541
+- pypi: git+https://github.com/xraygui/nbs-gui?branch=develop#82cd23cbe029ea0e270590736bd1329f6ac78602
   name: nbs-gui
-  version: 0.1.5.dev7+g048eb9b0a
+  version: 0.1.5.dev8+g82cd23cbe
   requires_dist:
   - bluesky-queueserver
   - bluesky-queueserver-api
@@ -11832,9 +11832,9 @@ packages:
   - pkg:pypi/sqlalchemy?source=compressed-mapping
   size: 3707065
   timestamp: 1775241332871
-- pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#9a685092aa61f69d9be18908fe39be764a1d0c1b
+- pypi: git+https://github.com/nsls-ii-sst/sst-base?branch=develop#885d0638712814134d0413203c28a83272fa25ac
   name: sst-base
-  version: 0.2.1.dev16+g9a685092a
+  version: 0.2.1.dev17+g885d06387
   requires_dist:
   - bluesky
   - nbs-bl>=0.3.1
