@@ -2,7 +2,7 @@
 header = "sst-gui-header"
 
 [gui.tabs]
-include = ["nbs-gui-queue", "kafka-table-tab", "nbs-gui-console", "nbs-gui-monitor", "sst-gui-samples", "sst-gui-energy-flyscan"]
+include = ["nbs-gui-queue", "kafka-table-tab", "nbs-gui-console", "nbs-gui-monitor", "sst-gui-samples"]
 
 [gui.plans]
 include = [
@@ -15,7 +15,8 @@ include = [
     "manual-sample-move",
     "haxpes-respes-custom",
     "haxpes-xps",
-    "haxpes-xps-custom"
+    "haxpes-xps-custom",
+    "sst-gui-energy-flyscan"
 ]
 
 [models.beamline]
