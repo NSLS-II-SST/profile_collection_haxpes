@@ -427,6 +427,7 @@ name = "vertical feedback"
 _target = "haxpes.devices.peak_analyzer.PeakAnalyzer"
 _group = "detectors"
 name = "PeakAnalyzer"
+peak_url = "http://xf07id-ws29-713.nsls2.bnl.gov:8087"
 _defer_loading = true
 
 [ses]
